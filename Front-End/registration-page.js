@@ -56,13 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
       .post("http://localhost:8000/api/v1/users/register", formData)
       .then(function (response) {
         console.log(response);
+        alert("Registration SuccessFull Login Now");
+        window.location.href = "/";
       })
       .catch(function (error) {
         console.log(error);
-      })
-      .finally(function () {
-        alert("Form data collected successfully! you can Login Now");
+        alert(error.response);
       });
+
     console.log(formData);
   });
 });
