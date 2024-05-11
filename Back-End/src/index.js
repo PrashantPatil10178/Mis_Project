@@ -17,6 +17,10 @@ connectDB()
     console.log("MONGO db connection failed !!! ", err);
   });
 
+
+app.get('/', (req, res) => {
+  res.json('Hello World!')
+})
 const May_need_this_in_future = [
   {
     name: "South indian Thali",
